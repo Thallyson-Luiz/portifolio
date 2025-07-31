@@ -1,11 +1,17 @@
 services:
   portifolio:
-    build: .
     container_name: portifolio
+    build: .
     volumes:
       - .:/code
     ports:
       - 8000:8000
+    environment:
+      - NAME=CHANGE-ME
+      - USER=CHANGE-ME
+      - PASSWORD=CHANGE-ME
+      - HOST=CHANGE-ME
+      - PORT=CHANGE-ME
     depends_on:
       - db
 
@@ -13,9 +19,9 @@ services:
     image: postgres:17.5
     container_name: db
     environment:
-      - POSTGRES_DB=portifolio
-      - POSTGRES_USER=thallyson
-      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=CHANGE-ME
+      - POSTGRES_USER=CHANGE-ME
+      - POSTGRES_PASSWORD=CHANGE-ME
     volumes:
       - db_data:/var/lib/postgresql/data
     ports:
