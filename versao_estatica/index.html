@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="animation.js" defer></script>
+    <title>Thallyson Luiz - Portifolio</title>
+</head>
+<body class=".body">
+<header class="containerColumn">
+    <div class="cabecario">
+        <a href="#">
+            <picture>
+                <!-- Imagem para telas grandes -->
+                <source srcset='images/cabecarioPc.jpg' media="(min-width: 800px)">
+            
+                <!-- Imagem padrão (quando a condição acima não for atendida) -->
+                <img class="img" src="images/cabecario.png" 
+                    alt="faça sites responsivos, com um dev de qualidade">
+            </picture>
+        </a>
+    </div>
+
+    <nav class="containerCenter center">
+        <div class="img-cabeçario img2">
+            <a href="#"><img src="images/logo.png" alt="logo thallys dev"></a>
+        </div>
+
+        <div class="item container div-header wrap">
+            <ul>
+                <li>
+                    <a href="#" class="head-a">projetos</a>
+                </li>
+                <li>
+                    <a href="#automaçoes" class="head-a">automações</a>
+                </li>
+                <li>
+                    <a href="#" class="head-a">tecnologias</a>
+                </li>
+                <li>
+                    <a href="#" class="head-a">Contact-me</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logos-apps">
+            <div class="img-logotipo-div">
+                <a href="#"><img src="images/whatsapp_logo.png" alt="imagem do whatsapp" class="img-logotipo"></a>
+            </div>
+            <div class="img-logotipo-div">
+                <a href="#"><img src="images/github-mark.png" alt="imagem do github" class="img-logotipo"></a>
+            </div>
+            <div class="img-logotipo-div">
+                <a href="#"><img src="images/linkedin.png" alt="imagem do linkedin" class="img-logotipo"></a>
+            </div>
+        </div>
+        </div>
+        <div class="burger" id="burger-menu"></div>
+    </nav>
+    <div class="menu-navegador">
+        <nav class="navbar-smartphone">
+            <ul>
+                <li><a href="">projetos</a></li>
+                <li><a href="">automações</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">tecnologias</a></li>
+                <li><a href="">mais</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="containerColumn">
+        <section class="container max">
+                <div class="backgroundImg item containerCenterColumn div-projetos" style="background-image: url(images/fundo_preto.avif);">
+                    <div class="img-cabeçario" id="img-cabeçario">
+                            <img class="img scale" src="images/worlwide.png" alt="">
+                    </div>
+                    <h1 class="h1">projeto1</h1>
+                    <p>sem descricao</p>
+                    <a href="MUDE A URL AQUI" class="botao">Ver post</a>
+                </div>
+                <div class="espaçamento"></div>
+                <div class="backgroundImg item containerCenterColumn div-projetos" style="background-image: url(images/fundo_preto.avif);">
+                    <div class="img-cabeçario" id="img-cabeçario">
+                            <img class="img scale" src="images/worlwide.png" alt="">
+                    </div>
+                    <h1 class="h1">projeto2</h1>
+                    <p>sem descricao</p>
+                    <a href="MUDE A URL AQUI" class="botao">Ver post</a>
+                </div>
+        </section>
+
+    <section id="automaçoes" class="center containerespecificacoes">
+        <div class="itemEspecificaçoes"></div>
+        <div class="itemEspecificaçoes azul"></div>
+        <div class="itemEspecificaçoes"></div>
+    </section>
+
+    <section class="infocontainer">
+        <div class="infosecondcontainer">
+            <div class="imgcontainerinfo">
+                <img src="images/django_icon.png" alt="django icon" class="img">
+            </div>
+            
+            <p class="pinfo">Agora Voce pode fazer sites responsivos com qualidade e segurança garantidas</p>
+
+            <a href="#" class="botao botaoinfo">Saiba mais</a>
+        </div>
+    </section>
+
+        <section class="conhecimentos center">
+            <h2 class="conhecimentos-text">Serviços especializados</h2>
+            <div class="conhecimentos-container" id="cardsContainer">
+                <div class="conhecimentos-item">
+                    <img src="images/criacaosites.jpg" alt="criação de sites imagem" class="img-servico">
+                    <h3 class="servico-h3">Criação de sites</h3>
+                    <p class="p-servico">Criação de sites modernos, rápidos e responsivos, desenvolvidos sob medida para destacar sua marca e facilitar a conexão com seus clientes.</p>
+                </div>
+                <div class="conhecimentos-item">
+                    <img src="images/deploy.jpg" alt="deploy imagem" class="img-servico">
+                    <h3 class="servico-h3">Deploy rapido e seguro</h3>
+                    <p class="p-servico">Deploy rápido e seguro, garantindo atualização ágil do seu projeto com máxima confiabilidade e proteção.</p>
+                </div>
+                <div class="conhecimentos-item">
+                    <img src="images/refatoramento.jpg" alt="refatoramento imagem" class="img-servico">
+                    <h3 class="servico-h3">Refatoramento</h3>
+                    <p class="p-servico">Refatoramento inteligente para otimizar seu código, aumentar a performance e facilitar futuras manutenções.</p>
+                </div>
+                <div class="conhecimentos-item">
+                    <img src="images/automacao.jpg" alt="Automações web imagem" class="img-servico">
+                    <h3 class="servico-h3">Automações web</h3>
+                    <p class="p-servico">Soluções de automação web que simplificam tarefas repetitivas, aceleram fluxos de trabalho e garantem mais eficiência.</p>
+                </div>
+                <div class="conhecimentos-item">
+                    <img src="images/backend.jpg" alt="backend imagem" class="img-servico">
+                    <h3 class="servico-h3">Criação de backend</h3>
+                    <p class="p-servico">Backend robusto e eficiente. soluções personalizadas que garantem segurança, rapidez e integração perfeita para seu sistema funcionar sem falhas.</p>
+                </div>
+                <div class="conhecimentos-item">
+                    <img src="images/otimizacao.jpg" alt="otimização imagem" class="img-servico">
+                    <h3 class="servico-h3">otimização de performance</h3>
+                    <p class="p-servico">Potencialize seus resultados: mais desempenho, eficiência correção de bugse economia para o seu projeto.</p>
+                </div>
+            </div>
+            <a href="#" class="botao amarelo">Consultar agora</a>
+        </section>
+    
+        <section class="perguntas">
+            <div class="cartao">
+                <h2 class="duvidas-frequenes">Perguntas frequentes</h2>
+                    <div class="acoding">
+                        <div class="acoding-item">
+                            <a  class="a-acoding">{{pergunta.pergunta}}</a>
+                        </div>
+                        <div class="acoding-description">
+                            <p class="text">{{pergunta.resposta}}</p>
+                        </div>
+                    </div>
+                <a class="botao amarelo perguntas-botao">Contrate ja</a>
+            </div>
+        </section>
+        
+        <section class="tecs-sec">
+            <h2 class="tecstitle">Tecnologias</h2>
+            <div class="container-cards-tec container-carrosel" id="container-cards">
+                <div class="card-tec">
+                    <img src="images/python.png" alt="python" class="img-tec">
+                    
+                    <h3 class="h3-tec">Python</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/javascript.png" alt="javascript" class="img-tec">
+                    
+                    <h3 class="h3-tec">Javascript</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/html.png" alt="html" class="img-tec">
+                    
+                    <h3 class="h3-tec">Html</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/css.png" alt="css" class="img-tec">
+                    
+                    <h3 class="h3-tec">css</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/selenium.png" alt="selenium" class="img-tec">
+                    
+                    <h3 class="h3-tec">Selenium</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/docker.png" alt="docker" class="img-tec">
+                    
+                    <h3 class="h3-tec">Docker</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/django.png" alt="django" class="img-tec">
+                    
+                    <h3 class="h3-tec">Django</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/postgresql.png" alt="postgresql" class="img-tec">
+                    
+                    <h3 class="h3-tec">PostgreSQL</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/sqlite.png" alt="sqlite" class="img-tec">
+                    
+                    <h3 class="h3-tec">SQLite</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/mysql.png" alt="mysql" class="img-tec">
+                    
+                    <h3 class="h3-tec">MySQL</h3>
+                </div>
+                <div class="card-tec">
+                    <img src="images/sql.png" alt="SQL" class="img-tec">
+                    
+                    <h3 class="h3-tec">SQL</h3>
+                </div>
+
+
+            </div>
+            
+            <a class="seta seta1"><</a>
+            <a class="seta seta2">></a>
+            <a class="botao amarelo perguntas-botao tecbutton">Contrate ja</a>
+        </section>
+</main>
+
+<footer>
+    <div class="footer-container center">
+        <div class="sobre-mim-container">
+            <div class="footer-img">
+                <img class="img" src="images/logo2.png" alt="thallys dev logo">
+            </div>
+
+            <p class="footer-p">Curioso e obstinado</p>
+            <p class="footer-p">Proativo e eficiente</p>
+            <p class="footer-p">Lógico e analítico</p>
+            <p class="footer-p">Organizado e comunicativo</p>
+            <p class="footer-p">Resiliente e profissional</p>
+        </div>
+        <div class="comentarios-footer">
+        </div>
+        <div class="redes-sociais">
+            <h2 class="h2-redes-sociais">Redes sociais</h2>
+            <div class="images-footer-container">
+                <div class="footer-img-redes-sociais">
+                    <a href="#"><img src="images/facebook-logo.png" alt="facebook" class="img"></a>
+                </div>
+                <div class="footer-img-redes-sociais">
+                    <a href="#"><img src="images/instagram-logo.png" alt="instagram" class="img"></a>
+                </div>
+                <div class="footer-img-redes-sociais">
+                    <a href="#"><img src="images/telegram.png" alt="telegram" class="img"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -5,3 +5,4 @@ README.md
 .gitignore
 .git
 db.sqlite3
+versao_estatica/
