@@ -118,7 +118,7 @@ USE_TZ = True
 
 # Media Data confg
 
-DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760 # 10MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 30485760 # 10MB
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

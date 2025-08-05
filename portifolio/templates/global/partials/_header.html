@@ -1,3 +1,62 @@
-<header>
-    
+{% load static %}
+<header class="containerColumn">
+    <div class="cabecario">
+        <a href="#">
+            <picture>
+                <!-- Imagem para telas grandes -->
+                <source srcset="{% static 'global/images/cabecarioPc.jpg' %}" media="(min-width: 800px)">
+            
+                <!-- Imagem padrão (quando a condição acima não for atendida) -->
+                <img class="img" src="{% static 'global/images/cabecario.png' %}" 
+                    alt="faça sites responsivos, com um dev de qualidade">
+            </picture>
+        </a>
+    </div>
+
+    <nav class="containerCenter center">
+        <div class="img-cabeçario img2">
+            <a href="#"><img src="{% static "global/images/logo.png" %}" alt="logo thallys dev"></a>
+        </div>
+
+        <div class="item container div-header wrap">
+            <ul>
+                <li>
+                    <a href="#" class="head-a">projetos</a>
+                </li>
+                <li>
+                    <a href="#automaçoes" class="head-a">automações</a>
+                </li>
+                <li>
+                    <a href="#" class="head-a">tecnologias</a>
+                </li>
+                <li>
+                    <a href="#" class="head-a">Contact-me</a>
+                </li>
+            </ul>
+        </div>
+        <div class="logos-apps">
+            <div class="img-logotipo-div">
+                <a href="#"><img src="{% static "global/images/whatsapp_logo.png" %}" alt="imagem do whatsapp" class="img-logotipo"></a>
+            </div>
+            <div class="img-logotipo-div">
+                <a href="#"><img src="{% static "global/images/github-mark.png" %}" alt="imagem do github" class="img-logotipo"></a>
+            </div>
+            <div class="img-logotipo-div">
+                <a href="#"><img src="{% static "global/images/linkedin.png" %}" alt="imagem do linkedin" class="img-logotipo"></a>
+            </div>
+        </div>
+        </div>
+        <div class="burger" id="burger-menu"></div>
+    </nav>
+    <div class="menu-navegador">
+        <nav class="navbar-smartphone">
+            <ul>
+                <li><a href="">projetos</a></li>
+                <li><a href="">automações</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">tecnologias</a></li>
+                <li><a href="">mais</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>

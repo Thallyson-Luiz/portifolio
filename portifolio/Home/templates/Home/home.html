@@ -1,5 +1,95 @@
 {% extends "global/base.html" %}
+{% load static %}
 
 {% block content %}
+    {% if projetos %}
+        <section class="container max" style=''>
+            {% for projeto in projetos %}
+                <div class="backgroundImg item containerCenterColumn div-projetos" style="background-image: url({{projeto.img.url}});">
+                    <div class="img-cabeçario" id="img-cabeçario">
+                            <img class="img scale" src="{{projeto.icon.url}}" alt="{{projeto.title}}">
+                    </div>
 
+                    <h1 class="h1">{{projeto.title}}</h1>
+                    <p>{{projeto.descricao}}</p>
+                    <a href="projeto.url" class="botao">Ver post</a>
+                </div>
+                {% if forloop.first %}
+                    <div class="espaçamento"></div>
+                {% endif %}
+                {% endfor %}
+        </section>
+    {% endif %}
+
+    <section id="automaçoes" class="center containerespecificacoes">
+        <div class="itemEspecificaçoes"></div>
+        <div class="itemEspecificaçoes azul"></div>
+        <div class="itemEspecificaçoes"></div>
+    </section>
+
+    <section class="infocontainer">
+        <div class="infosecondcontainer">
+            <div class="imgcontainerinfo">
+                <img src="{% static "global/images/django_icon.png" %}" alt="django icon" class="img">
+            </div>
+            
+            <p class="pinfo">Agora Voce pode fazer sites responsivos com qualidade e segurança garantidas</p>
+
+            <a href="#" class="botao botaoinfo">Saiba mais</a>
+        </div>
+    </section>
+
+    {% if servicos %}
+        <section class="conhecimentos center">
+            <h2 class="conhecimentos-text">Serviços especializados</h2>
+            <div class="conhecimentos-container" id="cardsContainer">
+                {% for servico in servicos %}
+                <div class="conhecimentos-item">
+                    <img src="{{servico.imagem.url}}" alt="{{servico.title}}" class="img-servico">
+                    <h3 class="servico-h3">{{servico.title}}</h3>
+                    <p class="p-servico">{{servico.descricao}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="#" class="botao amarelo">Consultar agora</a>
+        </section>
+    {% endif %}
+    
+    {% if perguntas %}
+        <section class="perguntas">
+            <div class="cartao">
+                <h2 class="duvidas-frequenes">Perguntas frequentes</h2>
+                {% for pergunta in perguntas %}
+                    <div class="acoding">
+                        <div class="acoding-item">
+                            <a  class="a-acoding">{{pergunta.pergunta}}</a>
+                        </div>
+                        <div class="acoding-description">
+                            <p class="text">{{pergunta.resposta}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <a class="botao amarelo perguntas-botao">Contrate ja</a>
+            </div>
+        </section>
+        
+        {% if tecnologias %}
+        <section class="tecs-sec">
+            <h2 class="tecstitle">Tecnologias</h2>
+            <div class="container-cards-tec container-carrosel" id="container-cards">
+                {% for tecnologia in tecnologias %}
+                <div class="card-tec" id="{{forloop.counter}}">
+                    <img src="{{tecnologia.imagem.url}}" alt="{{tecnologia.title}}" class="img-tec">
+                    
+                    <h3 class="h3-tec">{{tecnologia.title}}</h3>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <a class="seta seta1"><</a>
+            <a class="seta seta2">></a>
+            <a class="botao amarelo perguntas-botao tecbutton">Contrate ja</a>
+        </section>
+        {% endif %}
+    {% endif %}
 {% endblock content %}
