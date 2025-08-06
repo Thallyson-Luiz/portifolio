@@ -13,15 +13,12 @@ body {
   margin: 0 auto;
 }
 
-/* body */
-
 .body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 100vh;
 }
-/* containers */
 
 .containerCenter {
   display: flex;
@@ -51,8 +48,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* imgs */
-
 .img {
   width: 100%;
   height: 100%;
@@ -69,8 +64,6 @@ body {
   color: inherit;
 }
 
-/* scales */
-
 .scale {
   transition: all 0.2s ease;
 }
@@ -81,23 +74,22 @@ body {
 
 .container-carrosel img {
   -webkit-user-drag: none;
-  pointer-events: none; /* desativa clique e arrasto */
+  pointer-events: none;
 }
 
 .container-carrosel div {
-  pointer-events: none; /* bloqueia todos os cliques/arrastos */
-  user-select: none; /* impede selecionar textos ou imagens */
+  pointer-events: none;
+  user-select: none; 
 }
 
 .container-carrosel {
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 .container-carrosel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; 
 }
 
-/* variaveis */
 
 
 :root {
@@ -112,7 +104,6 @@ body {
   --footer-color: #505e68;
 }
 
-/* globais */
 * {
   margin: 0;
   padding: 0;
@@ -125,13 +116,10 @@ body {
   overflow-y: scroll;
 }
 
-/* header */
 header .cabecario {
   width: 100%;
   height: auto;
 }
-
-/* logo cabecario */
 
 .img-cabeçario {
   width: 15rem;
@@ -146,7 +134,6 @@ header .cabecario {
 .head-a {
   text-transform: uppercase;
 }
-/* links cabecario */
 
 .container ul {
   display: flex;
@@ -165,7 +152,6 @@ header .cabecario {
   margin-right: 4rem;
 }
 
-/* cabeçario imagem whatsapp */
 
 .img-logotipo-div {
   width: 4rem;
@@ -219,8 +205,6 @@ header .cabecario {
   box-shadow: var(--header-text) 0px 0px 3px 0px;
 }
 
-/* especificacoes */
-
 .containerespecificacoes {
   margin-top: 4rem;
   flex-wrap: wrap;
@@ -272,8 +256,8 @@ header .cabecario {
 }
 
 .imgcontainerinfo {
-  width: 40vw; /* 40% da largura da tela */
-  height: 40vw; /* mantém quadrado */
+  width: 40vw;
+  height: 40vw; 
   max-width: 16rem;
   max-height: 16rem;
 }
@@ -386,6 +370,8 @@ footer {
   color: var(--primary-color);
   font-size: 3.6rem;
   padding: 2.4rem 0;
+  text-align: center;
+  margin-bottom: 10%;
 }
 
 .conhecimentos-container {
@@ -406,7 +392,7 @@ footer {
 
 .conhecimentos-item {
   background-color: var(--primary-color);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -419,12 +405,12 @@ footer {
 }
 
 .conhecimentos-container {
-  -ms-overflow-style: none; /* IE e Edge antigo */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
 .conhecimentos-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari e Opera */
+  display: none;
 }
 
 .img-servico {
@@ -584,7 +570,6 @@ footer {
   flex-direction: column;
   background-color: var(--main-color);
   align-items: center;
-  position: relative;
   box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.2);
 }
 
@@ -608,7 +593,6 @@ footer {
   width: 25rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 3rem rgba(0, 0, 0, 0.2);
-  text-align: center;
   margin: 10rem auto;
 }
 
@@ -672,7 +656,7 @@ footer {
 
 .conhecimentos-container img {
   pointer-events: none;
-  -webkit-user-drag: none; /* Chrome/Safari antigo */
+  -webkit-user-drag: none;
 }
 
 .conhecimentos-container.active {
@@ -897,6 +881,87 @@ footer {
   }
 }
 
+@media (min-width: 1400px) {
+  .backgroundImg {
+    height: 80vh;
+    background-size: cover; 
+    background-position: center;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
+  .div-projetos h1 {
+    font-size: clamp(4rem, 4vw, 7rem);
+  }
+
+  .div-projetos p {
+    font-size: clamp(1.8rem, 2vw, 3rem);
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .botao {
+    font-size: 2rem;
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+.card-tec {
+  flex: 0 0 auto; 
+  width: clamp(20rem, 70%, 30rem); 
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  box-shadow: none;
+  margin-inline: 0;
+  transition: transform 0.3s ease;
+  scale: 1.4;
+}
+
+.card-tec:hover {
+  transform: scale(1.05);
+}
+
+.card-tec img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+h1, h2, h3, h4, h5, h6, p, a, span {
+  overflow-wrap: break-word; 
+}
+
+.div-projetos h1 {
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1.2;
+  padding: 0 1rem;
+}
+
+.div-projetos p {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  line-height: 1.4;
+  padding: 0 1rem;
+  max-width: 90%; 
+  margin: 0 auto;
+}
+
+.conhecimentos-text,
+.duvidas-frequenes,
+.tecstitle {
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  line-height: 1.2;
+  padding: 0 1rem;
+  max-width: 95%;
+  margin: 2rem auto;
+}
+
 @media (max-width: 768px) {
   .conhecimentos-container {
     justify-content: center;
@@ -936,7 +1001,7 @@ footer {
   
   .container-cards-tec {
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 1rem 0;
   }
   
   .card-tec {
@@ -945,12 +1010,14 @@ footer {
     min-width: auto;
     width: 75%;
     margin: 0 1rem;
+    
   }
   
   .tecstitle {
     font-size: 2.4rem;
     width: auto;
     padding: 1rem 2rem;
+    height: auto;
   }
   .footer-container {
     flex-direction: column;
@@ -970,110 +1037,42 @@ footer {
     width: 100%;
     height: auto;
   }
-}
-
-
-/* Telas grandes (desktops e ultrawide) */
-@media (min-width: 1400px) {
-  .backgroundImg {
-    height: 80vh; /* 80% da altura da tela */
-    background-size: cover; /* ajusta a imagem sem distorcer */
-    background-position: center;
-    border-radius: 1rem;
-    margin: 0 auto;
-  }
-
-  .div-projetos h1 {
-    font-size: clamp(4rem, 4vw, 7rem);
-  }
-
-  .div-projetos p {
-    font-size: clamp(1.8rem, 2vw, 3rem);
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .botao {
-    font-size: 2rem;
-    padding: 1.5rem 3.5rem;
-  }
-}
-
-/* Ajustes gerais para o carrossel de tecnologias */
 .container-cards-tec {
   display: flex;
-  justify-content: start;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  padding: 2rem 0;
-  gap: 2rem;
-
-  margin: auto 0;
   overflow-x: auto;
-  scrollbar-width: none;
+  scroll-behavior: smooth;
+  gap: 6rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .container-cards-tec::-webkit-scrollbar {
   display: none;
 }
 
-/* Cards das tecnologias */
 .card-tec {
-  flex: 0 0 auto; 
-  width: clamp(20rem, 70%, 30rem); 
   height: auto;
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 0.8rem;
-  box-shadow: none;
-  margin-inline: 0;
+  padding: 2rem;
   transition: transform 0.3s ease;
 }
 
+.card-tec img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Hover animado */
 .card-tec:hover {
   transform: scale(1.05);
 }
 
-.card-tec img {
-  width: 70%;
-  height: auto;
-  object-fit: contain;
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-h1, h2, h3, h4, h5, h6, p, a, span {
-  overflow-wrap: break-word; 
-}
-
-.div-projetos h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
-  line-height: 1.2;
-  padding: 0 1rem;
-}
-
-/* Parágrafos */
-.div-projetos p {
-  font-size: clamp(1.2rem, 4vw, 2rem);
-  line-height: 1.4;
-  padding: 0 1rem;
-  max-width: 90%; 
-  margin: 0 auto;
-}
-
-/* Títulos de seções */
-.conhecimentos-text,
-.duvidas-frequenes,
-.tecstitle {
-  font-size: clamp(1.8rem, 4vw, 3.6rem);
-  line-height: 1.2;
-  padding: 0 1rem;
-  max-width: 95%;
-  margin: 2rem auto;
 }
 
 
@@ -1110,13 +1109,13 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     padding: 0 1rem;
     box-sizing: border-box;
   }
-
+  
   .footer-img-redes-sociais {
     width: 4rem;
     height: 4rem;
     flex-shrink: 0;
   }
-
+  
   .footer-img-redes-sociais img {
     max-width: 100%;
     max-height: 100%;
@@ -1137,7 +1136,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
 
 @media (max-width: 100px) {
   html {
-    font-size: 30%; /* Reduz drasticamente a base */
+    font-size: 30%;
   }
 
   body {
@@ -1258,6 +1257,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     margin-top: 0 !important;
   }
 }
+
 
 
 
