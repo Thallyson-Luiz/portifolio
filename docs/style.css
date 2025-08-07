@@ -53,6 +53,15 @@ body {
   height: 100%;
 }
 
+.img.boot {
+  transition: all 0.3s ease-in-out;
+}
+
+.img.boot:hover {
+  transform: scale(1.2);
+  rotate: 10deg;
+}
+
 .backgroundImg {
   background-size: cover;
   background-position: center;
@@ -257,7 +266,7 @@ header .cabecario {
 
 .imgcontainerinfo {
   width: 40vw;
-  height: 40vw; 
+  height: auto; 
   max-width: 16rem;
   max-height: 16rem;
 }
@@ -790,7 +799,7 @@ footer {
     gap: 1.5rem;
     align-items: start;
     opacity: 0;
-    transition: all 0.5s linear;
+    transition: all 0.2s ease;
   }
   .navbar-smartphone ul li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
