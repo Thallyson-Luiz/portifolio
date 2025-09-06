@@ -1,3 +1,4 @@
+
 // estilizacao do carrosel de conhecimentos
 
 const container = document.getElementById('cardsContainer');
@@ -39,9 +40,9 @@ const description = document.querySelectorAll('.acoding-description');
 const acoding = document.querySelectorAll('.acoding');
 
 a_acoding.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        acoding[index].classList.toggle('active');
-    });
+  item.addEventListener('click', () => {
+    acoding[index].classList.toggle('active');
+  });
 });
 
 // estilizacao do carrosel de tecnologias 
@@ -83,22 +84,55 @@ const seta1 = document.querySelector('.seta1');
 const seta2 = document.querySelector('.seta2');
 
 seta1.addEventListener('click', () => {
-    container2.scrollBy({
-        left: -500,
-        behavior: 'smooth'
-    })
+  container2.scrollBy({
+    left: -500,
+    behavior: 'smooth'
+  })
 });
 
 seta2.addEventListener('click', () => {
-    container2.scrollBy({
-        left: 500,
-        behavior: 'smooth'
-    })
+  container2.scrollBy({
+    left: 500,
+    behavior: 'smooth'
+  })
 });
 
 const BURGER = document.getElementById('burger-menu');
 const NAV = document.querySelector('.menu-navegador');
+const ESCNAVBURGER = document.querySelector('.espacamento-cell');
+const HEADER = document.querySelector('header');
 
 BURGER.addEventListener('click', () => {
   NAV.classList.toggle('activeburger');
+
+  if (NAV.classList.contains('activeburger')) {
+    ESCNAVBURGER.style.minHeight = HEADER.offsetHeight + 'px';
+    ESCNAVBURGER.style.minWidth = HEADER.offsetWidth + 'px';
+  }
+
 })
+
+// observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const classe = entry.target.dataset.class; // Pega a classe específica do elemento
+    const delay = entry.target.dataset.delay || 0; // Pega o delay do elemento
+
+    if (entry.isIntersecting) {
+      setTimeout(() => { 
+        entry.target.classList.add(classe);
+        entry.target.style.opacity = 1;
+      }, delay
+    )
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+const animates = document.querySelectorAll('[data-class]');
+animates.forEach(animate => {
+  animate.style.opacity = 0;
+  observer.observe(animate);
+});
+
